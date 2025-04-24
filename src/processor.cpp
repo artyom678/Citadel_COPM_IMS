@@ -126,7 +126,7 @@ bool Processor::decompress() {
 	try {
 		do {
 
-			if (SignalHandler::isInterrupted()) { // why is it atomic???
+			if (SignalHandler::isInterrupted()) {
 				on_interrupt(dest);
 				return false;
 			}
